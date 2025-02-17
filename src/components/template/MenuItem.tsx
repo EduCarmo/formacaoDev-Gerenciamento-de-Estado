@@ -1,0 +1,28 @@
+import Link from "next/link";
+import React from "react";
+
+interface MenuItemProps {
+    icon: any
+    text: string
+    url: string
+}
+
+export default function MenuItem(props: MenuItemProps) {
+    return (
+        <div className="text-white">
+            <Link href={props.url} className="flex flex-col items-center gap-2">
+            <div className="
+                bg-gradient-to-r from-blue-500 to-green-500
+                rounded-full p-5
+            ">
+                {React.cloneElement(props.icon, {
+                    size: 90,
+                    stroke: 1,
+                    className: "opacity-40"
+                })}
+            </div>
+                <span className="opacity-30 font-black text-3xl">{props.text}</span>
+            </Link>
+        </div>
+    )
+}
