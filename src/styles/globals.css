@@ -29,4 +29,9 @@ body {
     @apply focus:right-2 focus:ring-opacity-30 focus:ring-white;
   }
 
+  .btn {
+    @apply bg-zinc-500 px-4 py-4 rounded-md; 
+    @apply hover:bg-zinc-700;
+  }
+
 }
